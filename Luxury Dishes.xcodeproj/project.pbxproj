@@ -15,7 +15,9 @@
 		0B32B6DF2A71A200002FAA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B32B6DD2A71A200002FAA8B /* LaunchScreen.storyboard */; };
 		0B32B6E92A71A6D5002FAA8B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B32B6E72A71A6D5002FAA8B /* CustomCell.swift */; };
 		0B32B6EA2A71A6D5002FAA8B /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B32B6E82A71A6D5002FAA8B /* CustomCell.xib */; };
-		0B746DF02A71B5D8003DA243 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DEF2A71B5D8003DA243 /* Extensions.swift */; };
+		0B746DF02A71B5D8003DA243 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DEF2A71B5D8003DA243 /* UIViewExtensions.swift */; };
+		0B746DF22A72671B003DA243 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DF12A72671B003DA243 /* UIColorExtensions.swift */; };
+		0B746DF42A726938003DA243 /* UITableViewHighlightEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DF32A726938003DA243 /* UITableViewHighlightEffect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,9 @@
 		0B32B6E02A71A200002FAA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B32B6E72A71A6D5002FAA8B /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		0B32B6E82A71A6D5002FAA8B /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
-		0B746DEF2A71B5D8003DA243 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0B746DEF2A71B5D8003DA243 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		0B746DF12A72671B003DA243 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		0B746DF32A726938003DA243 /* UITableViewHighlightEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHighlightEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,9 @@
 		0B746DEE2A71B5CA003DA243 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0B746DEF2A71B5D8003DA243 /* Extensions.swift */,
+				0B746DEF2A71B5D8003DA243 /* UIViewExtensions.swift */,
+				0B746DF12A72671B003DA243 /* UIColorExtensions.swift */,
+				0B746DF32A726938003DA243 /* UITableViewHighlightEffect.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -164,9 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B746DF02A71B5D8003DA243 /* Extensions.swift in Sources */,
+				0B746DF02A71B5D8003DA243 /* UIViewExtensions.swift in Sources */,
+				0B746DF42A726938003DA243 /* UITableViewHighlightEffect.swift in Sources */,
 				0B32B6D72A71A1FE002FAA8B /* ViewController.swift in Sources */,
 				0B32B6D32A71A1FE002FAA8B /* AppDelegate.swift in Sources */,
+				0B746DF22A72671B003DA243 /* UIColorExtensions.swift in Sources */,
 				0B32B6E92A71A6D5002FAA8B /* CustomCell.swift in Sources */,
 				0B32B6D52A71A1FE002FAA8B /* SceneDelegate.swift in Sources */,
 			);

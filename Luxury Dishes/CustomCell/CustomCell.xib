@@ -19,40 +19,65 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0C-IQ-Wco">
-                        <rect key="frame" x="20" y="10" width="301" height="155"/>
+                        <rect key="frame" x="30" y="15" width="281" height="145"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ck-OB-OS0">
-                                <rect key="frame" x="114" y="45" width="73" height="65"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ru1-sH-FWK">
+                                <rect key="frame" x="89.666666666666657" y="21.666666666666664" width="101.66666666666666" height="101.66666666666669"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plate" translatesAutoresizingMaskIntoConstraints="NO" id="9ck-OB-OS0">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="101.66666666666667"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9ck-OB-OS0" secondAttribute="height" id="XjM-d5-fj5"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GLu-AW-sSY">
+                                        <rect key="frame" x="10.333333333333329" y="10.333333333333336" width="81" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GLu-AW-sSY" secondAttribute="height" id="eOA-QW-16c"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="9vk-KF-ecG"/>
-                                    <constraint firstAttribute="width" constant="73" id="aYu-SP-nqq"/>
+                                    <constraint firstItem="9ck-OB-OS0" firstAttribute="top" secondItem="Ru1-sH-FWK" secondAttribute="top" id="0Cq-BM-i5p"/>
+                                    <constraint firstItem="GLu-AW-sSY" firstAttribute="width" secondItem="9ck-OB-OS0" secondAttribute="width" multiplier="0.8" id="41n-Nd-JGg"/>
+                                    <constraint firstItem="9ck-OB-OS0" firstAttribute="leading" secondItem="Ru1-sH-FWK" secondAttribute="leading" id="C8W-UU-88A"/>
+                                    <constraint firstItem="GLu-AW-sSY" firstAttribute="centerY" secondItem="9ck-OB-OS0" secondAttribute="centerY" id="HkS-7c-maM"/>
+                                    <constraint firstItem="GLu-AW-sSY" firstAttribute="centerX" secondItem="9ck-OB-OS0" secondAttribute="centerX" id="Juk-sy-4jW"/>
+                                    <constraint firstAttribute="width" secondItem="Ru1-sH-FWK" secondAttribute="height" id="MHB-1P-JN8"/>
+                                    <constraint firstAttribute="trailing" secondItem="9ck-OB-OS0" secondAttribute="trailing" id="dJl-SF-BYE"/>
+                                    <constraint firstAttribute="bottom" secondItem="9ck-OB-OS0" secondAttribute="bottom" id="pWy-jA-tGh"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9ck-OB-OS0" firstAttribute="centerX" secondItem="W0C-IQ-Wco" secondAttribute="centerX" id="WG9-bg-qhA"/>
-                            <constraint firstItem="9ck-OB-OS0" firstAttribute="centerY" secondItem="W0C-IQ-Wco" secondAttribute="centerY" id="vDg-nd-QcI"/>
+                            <constraint firstItem="Ru1-sH-FWK" firstAttribute="height" secondItem="W0C-IQ-Wco" secondAttribute="height" multiplier="0.7" id="0FB-2r-7VC"/>
+                            <constraint firstItem="Ru1-sH-FWK" firstAttribute="centerX" secondItem="W0C-IQ-Wco" secondAttribute="centerX" id="8MA-Lo-AY8"/>
+                            <constraint firstItem="Ru1-sH-FWK" firstAttribute="centerY" secondItem="W0C-IQ-Wco" secondAttribute="centerY" id="mGe-YR-veK"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="W0C-IQ-Wco" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="3zJ-5a-NdC"/>
-                    <constraint firstItem="W0C-IQ-Wco" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="eqb-lB-lXx"/>
-                    <constraint firstAttribute="bottom" secondItem="W0C-IQ-Wco" secondAttribute="bottom" constant="10" id="h33-Kw-EL8"/>
-                    <constraint firstAttribute="trailing" secondItem="W0C-IQ-Wco" secondAttribute="trailing" constant="20" id="tz5-T4-4jj"/>
+                    <constraint firstItem="W0C-IQ-Wco" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="3zJ-5a-NdC"/>
+                    <constraint firstItem="W0C-IQ-Wco" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="eqb-lB-lXx"/>
+                    <constraint firstAttribute="bottom" secondItem="W0C-IQ-Wco" secondAttribute="bottom" constant="15" id="h33-Kw-EL8"/>
+                    <constraint firstAttribute="trailing" secondItem="W0C-IQ-Wco" secondAttribute="trailing" constant="30" id="tz5-T4-4jj"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="foodImageView" destination="9ck-OB-OS0" id="ciB-ME-XfE"/>
+                <outlet property="dishParentView" destination="Ru1-sH-FWK" id="Hp1-Pk-fKS"/>
+                <outlet property="foodImageView" destination="GLu-AW-sSY" id="a2h-8b-bV9"/>
                 <outlet property="parentView" destination="W0C-IQ-Wco" id="Ecu-Io-WyR"/>
+                <outlet property="plateImageView" destination="9ck-OB-OS0" id="Qjz-Ww-pg2"/>
             </connections>
             <point key="canvasLocation" x="64.885496183206101" y="65.845070422535215"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Plate" width="130.66667175292969" height="130.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

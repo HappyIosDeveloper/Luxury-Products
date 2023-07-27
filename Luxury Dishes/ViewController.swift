@@ -25,8 +25,13 @@ class ViewController: UIViewController {
 extension ViewController {
     
     func setupView() {
+        setupNavigationBar()
         fillItems()
         setupTableView()
+    }
+    
+    func setupNavigationBar() {
+        navigationItem.title = "Luxury Dishes"
     }
     
     func setupTableView() {
@@ -34,6 +39,9 @@ extension ViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func fillItems() {
@@ -62,7 +70,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.bounds.width / 2
+        return view.bounds.width - (CustomCell.margin * 2)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
