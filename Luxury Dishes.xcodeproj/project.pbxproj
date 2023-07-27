@@ -18,6 +18,7 @@
 		0B746DF02A71B5D8003DA243 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DEF2A71B5D8003DA243 /* UIViewExtensions.swift */; };
 		0B746DF22A72671B003DA243 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DF12A72671B003DA243 /* UIColorExtensions.swift */; };
 		0B746DF42A726938003DA243 /* UITableViewHighlightEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DF32A726938003DA243 /* UITableViewHighlightEffect.swift */; };
+		0B746DF62A726A9D003DA243 /* CircularLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DF52A726A9D003DA243 /* CircularLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0B746DEF2A71B5D8003DA243 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0B746DF12A72671B003DA243 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		0B746DF32A726938003DA243 /* UITableViewHighlightEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHighlightEffect.swift; sourceTree = "<group>"; };
+		0B746DF52A726A9D003DA243 /* CircularLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				0B746DEF2A71B5D8003DA243 /* UIViewExtensions.swift */,
 				0B746DF12A72671B003DA243 /* UIColorExtensions.swift */,
 				0B746DF32A726938003DA243 /* UITableViewHighlightEffect.swift */,
+				0B746DF52A726A9D003DA243 /* CircularLabel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				0B746DF02A71B5D8003DA243 /* UIViewExtensions.swift in Sources */,
 				0B746DF42A726938003DA243 /* UITableViewHighlightEffect.swift in Sources */,
 				0B32B6D72A71A1FE002FAA8B /* ViewController.swift in Sources */,
+				0B746DF62A726A9D003DA243 /* CircularLabel.swift in Sources */,
 				0B32B6D32A71A1FE002FAA8B /* AppDelegate.swift in Sources */,
 				0B746DF22A72671B003DA243 /* UIColorExtensions.swift in Sources */,
 				0B32B6E92A71A6D5002FAA8B /* CustomCell.swift in Sources */,

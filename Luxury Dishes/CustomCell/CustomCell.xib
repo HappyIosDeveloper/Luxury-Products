@@ -49,12 +49,42 @@
                                     <constraint firstAttribute="bottom" secondItem="9ck-OB-OS0" secondAttribute="bottom" id="pWy-jA-tGh"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="salam salam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6x-6b-CLA" customClass="CircularLabel" customModule="Luxury_Dishes" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="261" height="125"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="salam salam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mv5-XL-B4x" customClass="CircularLabel" customModule="Luxury_Dishes" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="261" height="125"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ru1-sH-FWK" firstAttribute="height" secondItem="W0C-IQ-Wco" secondAttribute="height" multiplier="0.7" id="0FB-2r-7VC"/>
                             <constraint firstItem="Ru1-sH-FWK" firstAttribute="centerX" secondItem="W0C-IQ-Wco" secondAttribute="centerX" id="8MA-Lo-AY8"/>
+                            <constraint firstItem="i6x-6b-CLA" firstAttribute="leading" secondItem="W0C-IQ-Wco" secondAttribute="leading" constant="10" id="A8Y-mQ-Aq3"/>
+                            <constraint firstItem="Mv5-XL-B4x" firstAttribute="centerY" secondItem="i6x-6b-CLA" secondAttribute="centerY" id="GnJ-Qg-8Wc"/>
+                            <constraint firstItem="Mv5-XL-B4x" firstAttribute="height" secondItem="i6x-6b-CLA" secondAttribute="height" id="IUq-ea-bZN"/>
+                            <constraint firstAttribute="bottom" secondItem="i6x-6b-CLA" secondAttribute="bottom" constant="10" id="XHO-jZ-c06"/>
+                            <constraint firstItem="Mv5-XL-B4x" firstAttribute="width" secondItem="i6x-6b-CLA" secondAttribute="width" id="dhi-AJ-xt2"/>
                             <constraint firstItem="Ru1-sH-FWK" firstAttribute="centerY" secondItem="W0C-IQ-Wco" secondAttribute="centerY" id="mGe-YR-veK"/>
+                            <constraint firstItem="i6x-6b-CLA" firstAttribute="top" secondItem="W0C-IQ-Wco" secondAttribute="top" constant="10" id="ubc-Zp-ft0"/>
+                            <constraint firstItem="Mv5-XL-B4x" firstAttribute="centerX" secondItem="i6x-6b-CLA" secondAttribute="centerX" id="vSe-v5-jiX"/>
+                            <constraint firstAttribute="trailing" secondItem="i6x-6b-CLA" secondAttribute="trailing" constant="10" id="xoy-X3-cgA"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -68,7 +98,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="dishNameLabel" destination="i6x-6b-CLA" id="Fam-hu-P7l"/>
                 <outlet property="dishParentView" destination="Ru1-sH-FWK" id="Hp1-Pk-fKS"/>
+                <outlet property="dishPriceLabel" destination="Mv5-XL-B4x" id="lii-6Q-k0S"/>
                 <outlet property="foodImageView" destination="GLu-AW-sSY" id="a2h-8b-bV9"/>
                 <outlet property="parentView" destination="W0C-IQ-Wco" id="Ecu-Io-WyR"/>
                 <outlet property="plateImageView" destination="9ck-OB-OS0" id="Qjz-Ww-pg2"/>
@@ -76,6 +108,14 @@
             <point key="canvasLocation" x="64.885496183206101" y="65.845070422535215"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="Mv5-XL-B4x">
+            <size key="intrinsicContentSize" width="102" height="22.666666666666668"/>
+        </designable>
+        <designable name="i6x-6b-CLA">
+            <size key="intrinsicContentSize" width="102" height="22.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Plate" width="130.66667175292969" height="130.66667175292969"/>
         <systemColor name="systemBackgroundColor">
