@@ -40,6 +40,59 @@
             </objects>
             <point key="canvasLocation" x="773.28244274809163" y="-28.169014084507044"/>
         </scene>
+        <!--Dish View Controller-->
+        <scene sceneID="Nlg-E9-uid">
+            <objects>
+                <viewController storyboardIdentifier="DishViewController" id="FEi-Bf-ok9" customClass="DishViewController" customModule="Luxury_Dishes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="die-aF-rnB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-hA-AiT">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EyM-Mh-HN6">
+                                        <rect key="frame" x="47.666666666666657" y="79" width="298" height="298"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IYC-MR-khY">
+                                        <rect key="frame" x="47.666666666666657" y="79" width="298" height="298"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="IYC-MR-khY" secondAttribute="height" id="oUO-P4-6z2"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="IYC-MR-khY" secondAttribute="bottom" constant="16" id="0pA-p0-kpe"/>
+                                    <constraint firstItem="EyM-Mh-HN6" firstAttribute="centerY" secondItem="IYC-MR-khY" secondAttribute="centerY" id="61z-8u-j7J"/>
+                                    <constraint firstItem="IYC-MR-khY" firstAttribute="centerX" secondItem="CRf-hA-AiT" secondAttribute="centerX" id="6Am-ub-2NF"/>
+                                    <constraint firstItem="EyM-Mh-HN6" firstAttribute="width" secondItem="EyM-Mh-HN6" secondAttribute="height" id="72A-3J-88g"/>
+                                    <constraint firstAttribute="width" secondItem="CRf-hA-AiT" secondAttribute="height" id="L3F-A5-zBW"/>
+                                    <constraint firstItem="EyM-Mh-HN6" firstAttribute="centerX" secondItem="IYC-MR-khY" secondAttribute="centerX" id="UMe-Pk-YHd"/>
+                                    <constraint firstItem="EyM-Mh-HN6" firstAttribute="width" secondItem="IYC-MR-khY" secondAttribute="width" id="f67-ie-wE3"/>
+                                    <constraint firstItem="EyM-Mh-HN6" firstAttribute="height" secondItem="IYC-MR-khY" secondAttribute="height" id="s09-1T-rkb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZBT-3b-Csk"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CRf-hA-AiT" firstAttribute="leading" secondItem="ZBT-3b-Csk" secondAttribute="leading" id="0TL-6e-VeQ"/>
+                            <constraint firstItem="ZBT-3b-Csk" firstAttribute="trailing" secondItem="CRf-hA-AiT" secondAttribute="trailing" id="G7i-IC-RwJ"/>
+                            <constraint firstItem="IYC-MR-khY" firstAttribute="top" secondItem="ZBT-3b-Csk" secondAttribute="top" constant="20" id="ZA0-p9-Z84"/>
+                            <constraint firstItem="CRf-hA-AiT" firstAttribute="top" secondItem="die-aF-rnB" secondAttribute="top" id="zqj-dM-Lcz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="foodImageView" destination="IYC-MR-khY" id="VIr-xf-BKq"/>
+                        <outlet property="plateImageView" destination="EyM-Mh-HN6" id="RL4-GM-EYS"/>
+                        <outlet property="topSection" destination="CRf-hA-AiT" id="Vwe-kd-8Q9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjb-dO-Ay3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="-28"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="xUI-oe-ZQv">
             <objects>
@@ -56,7 +109,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41G-SM-y4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-153.43511450381678" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="-31" y="-28"/>
         </scene>
     </scenes>
     <resources>

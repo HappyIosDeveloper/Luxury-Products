@@ -11,6 +11,7 @@ class CustomCell: UITableViewCell {
 
     static let id = "CustomCell"
     static let margin: CGFloat = 30
+    static let cellHeight: CGFloat = UIScreen.main.bounds.width - (margin * 2)
     
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var dishParentView: UIView!
@@ -18,10 +19,6 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var dishNameLabel: CircularLabel!
     @IBOutlet weak var dishPriceLabel: CircularLabel!
-
-    let colors = ["feeded", "decade", "dabbed", "beefed", "beaded"]
-    let dishNames = ["Bluefin Tuna", "Iberico Ham", "Kopi Luwak Coffee", "Matsutake Mushrooms", "Saffron", "Beluga Caviar"]
-    let prices = ["$1,000", "$2,300", "$1,400", "$9,800", "$1,900", "$1,500"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,11 +42,11 @@ extension CustomCell {
         dishPriceLabel.font = UIFont(name: "HelveticaNeue-Light", size: 17)
     }
     
-    func setup(item: String) {
-        foodImageView.image = UIImage(named: item)
-        dishNameLabel.text = dishNames.randomElement()!
-        dishPriceLabel.text = prices.randomElement()!
-        parentView.backgroundColor = UIColor(hex: colors.randomElement()!)
+    func setup(dish: Dish) {
+        foodImageView.image = UIImage(named: dish.image)
+        dishNameLabel.text = dish.name
+        dishPriceLabel.text = dish.price
+        parentView.backgroundColor = UIColor(hex: dish.color)
         dishParentView.dishAppearEffect()
         foodImageView.rotate()
         dishNameLabel.textRotateTop()

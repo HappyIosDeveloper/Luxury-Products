@@ -15,10 +15,12 @@
 		0B32B6DF2A71A200002FAA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B32B6DD2A71A200002FAA8B /* LaunchScreen.storyboard */; };
 		0B32B6E92A71A6D5002FAA8B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B32B6E72A71A6D5002FAA8B /* CustomCell.swift */; };
 		0B32B6EA2A71A6D5002FAA8B /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B32B6E82A71A6D5002FAA8B /* CustomCell.xib */; };
+		0B69D64C2A72CB01005C8E23 /* DishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69D64B2A72CB01005C8E23 /* DishViewController.swift */; };
 		0B746DF02A71B5D8003DA243 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DEF2A71B5D8003DA243 /* UIViewExtensions.swift */; };
 		0B746DF22A72671B003DA243 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DF12A72671B003DA243 /* UIColorExtensions.swift */; };
 		0B746DF42A726938003DA243 /* UITableViewHighlightEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DF32A726938003DA243 /* UITableViewHighlightEffect.swift */; };
 		0B746DF62A726A9D003DA243 /* CircularLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DF52A726A9D003DA243 /* CircularLabel.swift */; };
+		0BF7A9922A72CCB9005E6127 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A9912A72CCB9005E6127 /* Dish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +34,12 @@
 		0B32B6E02A71A200002FAA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B32B6E72A71A6D5002FAA8B /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		0B32B6E82A71A6D5002FAA8B /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		0B69D64B2A72CB01005C8E23 /* DishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewController.swift; sourceTree = "<group>"; };
 		0B746DEF2A71B5D8003DA243 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0B746DF12A72671B003DA243 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		0B746DF32A726938003DA243 /* UITableViewHighlightEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHighlightEffect.swift; sourceTree = "<group>"; };
 		0B746DF52A726A9D003DA243 /* CircularLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLabel.swift; sourceTree = "<group>"; };
+		0BF7A9912A72CCB9005E6127 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +72,12 @@
 		0B32B6D12A71A1FE002FAA8B /* Luxury Dishes */ = {
 			isa = PBXGroup;
 			children = (
+				0BF7A9902A72CCAE005E6127 /* Models */,
 				0B746DEE2A71B5CA003DA243 /* Helpers */,
 				0B32B6E62A71A6B2002FAA8B /* CustomCell */,
-				0B32B6D22A71A1FE002FAA8B /* AppDelegate.swift */,
+				0B69D64A2A72CAA9005C8E23 /* Controllers */,
 				0B32B6D42A71A1FE002FAA8B /* SceneDelegate.swift */,
-				0B32B6D62A71A1FE002FAA8B /* ViewController.swift */,
+				0B32B6D22A71A1FE002FAA8B /* AppDelegate.swift */,
 				0B32B6D82A71A1FE002FAA8B /* Main.storyboard */,
 				0B32B6DB2A71A200002FAA8B /* Assets.xcassets */,
 				0B32B6DD2A71A200002FAA8B /* LaunchScreen.storyboard */,
@@ -90,6 +95,15 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
+		0B69D64A2A72CAA9005C8E23 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B32B6D62A71A1FE002FAA8B /* ViewController.swift */,
+				0B69D64B2A72CB01005C8E23 /* DishViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		0B746DEE2A71B5CA003DA243 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +113,14 @@
 				0B746DF52A726A9D003DA243 /* CircularLabel.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0BF7A9902A72CCAE005E6127 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0BF7A9912A72CCB9005E6127 /* Dish.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,10 +196,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B746DF02A71B5D8003DA243 /* UIViewExtensions.swift in Sources */,
+				0BF7A9922A72CCB9005E6127 /* Dish.swift in Sources */,
 				0B746DF42A726938003DA243 /* UITableViewHighlightEffect.swift in Sources */,
 				0B32B6D72A71A1FE002FAA8B /* ViewController.swift in Sources */,
 				0B746DF62A726A9D003DA243 /* CircularLabel.swift in Sources */,
 				0B32B6D32A71A1FE002FAA8B /* AppDelegate.swift in Sources */,
+				0B69D64C2A72CB01005C8E23 /* DishViewController.swift in Sources */,
 				0B746DF22A72671B003DA243 /* UIColorExtensions.swift in Sources */,
 				0B32B6E92A71A6D5002FAA8B /* CustomCell.swift in Sources */,
 				0B32B6D52A71A1FE002FAA8B /* SceneDelegate.swift in Sources */,
