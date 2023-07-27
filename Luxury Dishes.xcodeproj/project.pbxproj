@@ -21,6 +21,11 @@
 		0B746DF42A726938003DA243 /* UITableViewHighlightEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DF32A726938003DA243 /* UITableViewHighlightEffect.swift */; };
 		0B746DF62A726A9D003DA243 /* CircularLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B746DF52A726A9D003DA243 /* CircularLabel.swift */; };
 		0BF7A9922A72CCB9005E6127 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A9912A72CCB9005E6127 /* Dish.swift */; };
+		0BF7A9942A72D662005E6127 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A9932A72D662005E6127 /* GlobalConstants.swift */; };
+		0BF7A9962A72D83B005E6127 /* CardTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A9952A72D83B005E6127 /* CardTransition.swift */; };
+		0BF7A9992A72D886005E6127 /* PresentCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A9982A72D886005E6127 /* PresentCardAnimator.swift */; };
+		0BF7A99B2A72DA7E005E6127 /* DismissCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A99A2A72DA7E005E6127 /* DismissCardAnimator.swift */; };
+		0BF7A99D2A72DB0E005E6127 /* CardPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A99C2A72DB0E005E6127 /* CardPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		0B746DF32A726938003DA243 /* UITableViewHighlightEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHighlightEffect.swift; sourceTree = "<group>"; };
 		0B746DF52A726A9D003DA243 /* CircularLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLabel.swift; sourceTree = "<group>"; };
 		0BF7A9912A72CCB9005E6127 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		0BF7A9932A72D662005E6127 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		0BF7A9952A72D83B005E6127 /* CardTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransition.swift; sourceTree = "<group>"; };
+		0BF7A9982A72D886005E6127 /* PresentCardAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentCardAnimator.swift; sourceTree = "<group>"; };
+		0BF7A99A2A72DA7E005E6127 /* DismissCardAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissCardAnimator.swift; sourceTree = "<group>"; };
+		0BF7A99C2A72DB0E005E6127 /* CardPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +117,12 @@
 		0B746DEE2A71B5CA003DA243 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0BF7A9972A72D872005E6127 /* TransitionAnimations */,
 				0B746DEF2A71B5D8003DA243 /* UIViewExtensions.swift */,
 				0B746DF12A72671B003DA243 /* UIColorExtensions.swift */,
 				0B746DF32A726938003DA243 /* UITableViewHighlightEffect.swift */,
 				0B746DF52A726A9D003DA243 /* CircularLabel.swift */,
+				0BF7A9932A72D662005E6127 /* GlobalConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -121,6 +133,17 @@
 				0BF7A9912A72CCB9005E6127 /* Dish.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0BF7A9972A72D872005E6127 /* TransitionAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				0BF7A9952A72D83B005E6127 /* CardTransition.swift */,
+				0BF7A9982A72D886005E6127 /* PresentCardAnimator.swift */,
+				0BF7A99A2A72DA7E005E6127 /* DismissCardAnimator.swift */,
+				0BF7A99C2A72DB0E005E6127 /* CardPresentationController.swift */,
+			);
+			path = TransitionAnimations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,12 +222,17 @@
 				0BF7A9922A72CCB9005E6127 /* Dish.swift in Sources */,
 				0B746DF42A726938003DA243 /* UITableViewHighlightEffect.swift in Sources */,
 				0B32B6D72A71A1FE002FAA8B /* ViewController.swift in Sources */,
+				0BF7A9962A72D83B005E6127 /* CardTransition.swift in Sources */,
+				0BF7A9992A72D886005E6127 /* PresentCardAnimator.swift in Sources */,
 				0B746DF62A726A9D003DA243 /* CircularLabel.swift in Sources */,
+				0BF7A9942A72D662005E6127 /* GlobalConstants.swift in Sources */,
 				0B32B6D32A71A1FE002FAA8B /* AppDelegate.swift in Sources */,
 				0B69D64C2A72CB01005C8E23 /* DishViewController.swift in Sources */,
 				0B746DF22A72671B003DA243 /* UIColorExtensions.swift in Sources */,
 				0B32B6E92A71A6D5002FAA8B /* CustomCell.swift in Sources */,
+				0BF7A99D2A72DB0E005E6127 /* CardPresentationController.swift in Sources */,
 				0B32B6D52A71A1FE002FAA8B /* SceneDelegate.swift in Sources */,
+				0BF7A99B2A72DA7E005E6127 /* DismissCardAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

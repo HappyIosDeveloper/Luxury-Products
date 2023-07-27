@@ -7,34 +7,49 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     lazy var dishes: [Dish] = []
     private var isScrollingUp = false
+    private var transition: CardTransition?
+    private var openCellIndex = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if openCellIndex != -1 {
+            let cell = tableView.cellForRow(at: IndexPath(row: openCellIndex, section: 0)) as! CustomCell
+            cell.foodImageView.popIn() {
+                cell.foodImageView.rotate()
+                cell.nameLabel.textRotateTop()
+                cell.priceLabel.textRotateBottom()
+            }
+        }
+    }
 }
 
 // MARK: - Setup Functions
 extension ViewController {
     
-    func setupView() {
+    private func setupView() {
         setupNavigationBar()
         fillItems()
         setupTableView()
     }
     
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         navigationItem.title = "Luxury Dishes"
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         tableView.register(UINib(nibName: CustomCell.id, bundle: nil), forCellReuseIdentifier: CustomCell.id)
         tableView.delegate = self
         tableView.dataSource = self
@@ -44,7 +59,7 @@ extension ViewController {
         }
     }
     
-    func fillItems() {
+    private func fillItems() {
         dishes = [
             Dish(name: "Bluefin Tuna", price: "$1,000", color: "feeded", image: "1"),
             Dish(name: "Iberico Ham", price: "$2,300", color: "decade", image: "2"),
@@ -86,9 +101,40 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cellTapAction(for: indexPath)
+    }
+}
+
+
+// MARK: - Actions
+extension ViewController {
+    
+    private func cellTapAction(for indexPath: IndexPath) {
+        openCellIndex = indexPath.row
+        let cell = tableView.cellForRow(at: indexPath) as! CustomCell
+        cell.freezeAnimations()
+        // Get current frame on screen
+        let currentCellFrame = cell.frame
+        // Convert current frame to screen's coordinates
+        let cardPresentationFrameOnScreen = tableView.convert(currentCellFrame, to: view)
+        // Get card frame without transform in screen's coordinates  (for the dismissing back later to original location)
+        let cardFrameWithoutTransform = { () -> CGRect in
+            let center = cell.center
+            let size = cell.bounds.size
+            let r = CGRect(x: center.x - size.width / 2, y: center.y - (size.height / 2), width: size.width * 0.9, height: size.height * 0.9)
+            return cell.superview!.convert(r, to: nil)
+        }()
+        // Set up card detail view controller
         let vc = storyboard?.instantiateViewController(withIdentifier: "DishViewController") as! DishViewController
         vc.dish = dishes[indexPath.row]
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: false)
+        let params = CardTransition.Params(fromCardFrame: cardPresentationFrameOnScreen, fromCardFrameWithoutTransform: cardFrameWithoutTransform, fromCell: cell)
+        transition = CardTransition(params: params)
+        vc.transitioningDelegate = transition
+        // If `modalPresentationStyle` is not `.fullScreen`, this should be set to true to make status bar depends on presented vc.
+        vc.modalPresentationCapturesStatusBarAppearance = true
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: true, completion: { [weak cell] in
+            cell?.unfreezeAnimations()
+        })
     }
 }

@@ -88,6 +88,15 @@ extension UIView {
             self.transform = CGAffineTransform(rotationAngle: .pi)
         })
     }
+    
+    func infiniteRotation(startAngle: Double = .pi) {
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation.toValue = NSNumber(value: startAngle * 2)
+        rotation.duration = 20
+        rotation.isCumulative = true
+        rotation.repeatCount = Float.greatestFiniteMagnitude
+        layer.add(rotation, forKey: "rotationAnimation")
+    }
 }
 
 // MARK: - Shadows & Corners
@@ -112,14 +121,15 @@ extension UIView {
         layer.cornerCurve = .continuous
     }
     
-    func dropShadow() {
+    func dropShadow(isForceShrink: Bool = false) {
+        let margin = bounds.width / 5
         if layer.shadowPath == nil {
             layer.masksToBounds = false
-            layer.shadowOffset = CGSize(width: bounds.width / 3, height: bounds.width / 3)
+            layer.shadowOffset = isForceShrink ? .zero : CGSize(width: bounds.width / 3, height: bounds.width / 3)
             layer.shadowColor = UIColor.black.cgColor
             layer.shadowOpacity = 1
             layer.shadowRadius = bounds.width / 2
-            layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+            layer.shadowPath = isForceShrink ? UIBezierPath(rect: bounds.inset(by: .init(top: margin, left: margin, bottom: margin, right: margin))).cgPath : UIBezierPath(rect: bounds).cgPath
             layer.shouldRasterize = true
             layer.rasterizationScale = UIScreen.main.scale
         }
@@ -135,6 +145,55 @@ extension UIView {
             layer.shadowPath = UIBezierPath(rect: bounds.offsetBy(dx: 0.3, dy: 0.3)).cgPath
             layer.shouldRasterize = true
             layer.rasterizationScale = UIScreen.main.scale
+        }
+    }
+}
+
+// MARK: - Pops
+extension UIView {
+    
+    func popIn(comple: (()->())? = nil) {
+        let defaultTransform = transform
+        transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        alpha = 0.0
+        isHidden = false
+        layoutIfNeeded()
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: .allowUserInteraction) {
+            self.transform = defaultTransform
+            self.alpha = 1
+            self.layoutIfNeeded()
+        } completion: { finished in
+            if finished {
+                comple?()
+            }
+        }
+    }
+    
+    func popOut(duration: Double = 0.5, comple: (()->())? = nil) {
+        let defaultTransform = transform
+        UIView.animate(withDuration: duration, delay: 0, options: .allowUserInteraction) {
+            self.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            self.alpha = 0
+            self.layoutIfNeeded()
+        } completion: { finished in
+            if finished {
+                self.isHidden = true
+                self.transform = defaultTransform
+                self.alpha = 1
+                self.layoutIfNeeded()
+                comple?()
+            }
+        }
+    }
+    
+    func pop(duration: CGFloat = 0.6) {
+        isHidden = false
+        transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: duration + 0.2, initialSpringVelocity: 5.0, options: UIView.AnimationOptions.allowUserInteraction, animations: { () -> Void in
+            self.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.layoutIfNeeded()
+        }) { (Bool) -> Void in
+            self.layoutIfNeeded()
         }
     }
 }

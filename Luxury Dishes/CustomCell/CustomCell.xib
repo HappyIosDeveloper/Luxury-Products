@@ -98,12 +98,12 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="dishNameLabel" destination="i6x-6b-CLA" id="Fam-hu-P7l"/>
                 <outlet property="dishParentView" destination="Ru1-sH-FWK" id="Hp1-Pk-fKS"/>
-                <outlet property="dishPriceLabel" destination="Mv5-XL-B4x" id="lii-6Q-k0S"/>
                 <outlet property="foodImageView" destination="GLu-AW-sSY" id="a2h-8b-bV9"/>
+                <outlet property="nameLabel" destination="i6x-6b-CLA" id="Fam-hu-P7l"/>
                 <outlet property="parentView" destination="W0C-IQ-Wco" id="Ecu-Io-WyR"/>
                 <outlet property="plateImageView" destination="9ck-OB-OS0" id="Qjz-Ww-pg2"/>
+                <outlet property="priceLabel" destination="Mv5-XL-B4x" id="lii-6Q-k0S"/>
             </connections>
             <point key="canvasLocation" x="64.885496183206101" y="65.845070422535215"/>
         </tableViewCell>
