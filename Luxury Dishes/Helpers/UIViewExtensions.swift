@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Cell Parent Animations
 extension UIView {
     
     func parentAppearEffect(isScrollingUp: Bool) {
@@ -33,6 +34,7 @@ extension UIView {
     }
 }
 
+// MARK: - Cell Child Animations
 extension UIView {
     
     func dishAppearEffect() {
@@ -59,6 +61,7 @@ extension UIView {
     }
 }
 
+// MARK: - Rotations
 extension UIView {
     
     func textRotateTop() {
@@ -84,6 +87,29 @@ extension UIView {
         UIView.animate(withDuration: 1.5, animations: {
             self.transform = CGAffineTransform(rotationAngle: .pi)
         })
+    }
+}
+
+// MARK: - Shadows & Corners
+extension UIView {
+    
+    func dropShadowAndCornerRadius(_ value: Double, opacity:Float = 0.1) {
+        roundUp(value)
+        dropShadow(opacity: opacity, corner: value)
+    }
+
+    func dropShadow(opacity:Float = 0.05, corner: Double) {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = opacity
+        layer.shadowOffset = CGSize(width: 5, height: 5)
+        layer.shadowRadius = corner
+    }
+    
+    func roundUp(_ value: Double) {
+        layer.cornerRadius = value
+        layer.masksToBounds = true
+        layer.cornerCurve = .continuous
     }
     
     func dropShadow() {

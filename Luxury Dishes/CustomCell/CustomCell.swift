@@ -28,12 +28,6 @@ class CustomCell: UITableViewCell {
         
         basicViewSetups()
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        roundCell()
-    }
 }
 
 // MARK: - Setup Functions
@@ -43,17 +37,12 @@ extension CustomCell {
         clipsToBounds = false
         contentView.clipsToBounds = false
         selectionStyle = .none
-        parentView.dropMiniShadow()
+        parentView.dropShadowAndCornerRadius(bounds.width / 5)
         plateImageView.dropShadow()
         dishNameLabel.textColor = .darkText
         dishNameLabel.font = UIFont(name: "HelveticaNeue-Light", size: 20)
         dishPriceLabel.textColor = .darkText
         dishPriceLabel.font = UIFont(name: "HelveticaNeue-Light", size: 17)
-    }
-    
-    private func roundCell() {
-        parentView.layer.cornerRadius = parentView.frame.height / 2
-        contentView.layoutIfNeeded()
     }
     
     func setup(item: String) {
