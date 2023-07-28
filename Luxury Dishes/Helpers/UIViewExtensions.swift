@@ -256,5 +256,10 @@ extension UIView {
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             confettiView.stopConfetti()
         }
+        confettiView.transform = CGAffineTransform(translationX: 1, y: -bounds.height)
+        UIView.animate(withDuration: 0.3) { 
+            confettiView.transform = .identity
+            self.layoutIfNeeded()
+        }
     }
 }
