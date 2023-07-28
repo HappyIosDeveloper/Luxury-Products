@@ -98,16 +98,14 @@ extension ViewController {
     private func cellTapAction(for indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! CustomCell
         cell.freezeAnimations()
-        // Get current frame on screen
-        let currentCellFrame = cell.frame
         // Convert current frame to screen's coordinates
-        let cardPresentationFrameOnScreen = tableView.convert(currentCellFrame, to: view)
+        let cardPresentationFrameOnScreen = tableView.convert(cell.frame, to: view)
         // Get card frame without transform in screen's coordinates  (for the dismissing back later to original location)
         let cardFrameWithoutTransform = { () -> CGRect in
             let center = cell.center
-            let size = cell.bounds.size
-            let r = CGRect(x: center.x - size.width / 2, y: center.y - (size.height / 2), width: size.width * 0.9, height: size.height * 0.9)
-            return cell.superview!.convert(r, to: nil)
+            let size = cell.frame.size
+            let rect = CGRect(x: center.x - size.width / 2, y: center.y - (size.height / 2), width: size.width * 0.9, height: size.height * 0.9)
+            return tableView.convert(rect, to: nil)
         }()
         // Set up card detail view controller
         let vc = storyboard?.instantiateViewController(withIdentifier: "DishViewController") as! DishViewController

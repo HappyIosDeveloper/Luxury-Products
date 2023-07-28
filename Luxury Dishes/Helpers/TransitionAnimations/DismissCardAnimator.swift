@@ -38,20 +38,16 @@ final class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning
             ctx.viewController(forKey: .from)! as! DishViewController,
             (ctx.viewController(forKey: .to)! as? UINavigationController)?.viewControllers.first as! ViewController
         )
-
         let cardDetailView = ctx.view(forKey: .from)!
         let animatedContainerView = UIView()
         animatedContainerView.translatesAutoresizingMaskIntoConstraints = false
         cardDetailView.translatesAutoresizingMaskIntoConstraints = false
-
         container.removeConstraints(container.constraints)
-        
         container.addSubview(animatedContainerView)
         animatedContainerView.addSubview(cardDetailView)
-
         // Card fills inside animated container view
         cardDetailView.edges(to: animatedContainerView)
-
+        
         animatedContainerView.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
         let animatedContainerTopConstraint = animatedContainerView.topAnchor.constraint(equalTo: container.topAnchor, constant: 0)
         let animatedContainerWidthConstraint = animatedContainerView.widthAnchor.constraint(equalToConstant: cardDetailView.frame.width)
@@ -60,14 +56,26 @@ final class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning
         NSLayoutConstraint.activate([animatedContainerTopConstraint, animatedContainerWidthConstraint, animatedContainerHeightConstraint])
 
         // Fix weird top inset
-        let topTemporaryFix = screens.cardDetail.topSection.topAnchor.constraint(equalTo: cardDetailView.topAnchor)
+        let topTemporaryFix = screens.cardDetail.view.topAnchor.constraint(equalTo: cardDetailView.topAnchor)
         topTemporaryFix.isActive = GlobalConstants.isEnabledWeirdTopInsetsFix
-
         container.layoutIfNeeded()
-
         // Force card filling bottom
-        let stretchCardToFillBottom = screens.cardDetail.topSection.bottomAnchor.constraint(equalTo: cardDetailView.bottomAnchor)
-
+        let stretchCardToFillBottom = screens.cardDetail.view.bottomAnchor.constraint(equalTo: cardDetailView.bottomAnchor)
+        
+        let animationTime = transitionDuration(using: ctx)
+        UIView.animate(withDuration: animationTime, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.0, options: [], animations: {
+            animateCardViewBackToPlace()
+        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + animationTime - 0.4) {
+            UIView.animate(withDuration: animationTime + 0.4, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.0, options: [], animations: {
+                completeEverything()
+            })
+        }
+        UIView.animate(withDuration: transitionDuration(using: ctx) * 0.6) {
+            screens.cardDetail.scrollView.contentOffset = .zero
+        }
+        
+        
         func animateCardViewBackToPlace() {
             stretchCardToFillBottom.isActive = true
             // Back to identity
@@ -101,15 +109,6 @@ final class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning
                 cardDetailView.edges(to: container)
             }
             ctx.completeTransition(success)
-        }
-
-        UIView.animate(withDuration: transitionDuration(using: ctx), delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.0, options: [], animations: {
-            animateCardViewBackToPlace()
-        }) { (finished) in
-            completeEverything()
-        }
-        UIView.animate(withDuration: transitionDuration(using: ctx) * 0.6) {
-            screens.cardDetail.scrollView.contentOffset = .zero
         }
     }
 }
