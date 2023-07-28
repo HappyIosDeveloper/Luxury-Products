@@ -51,7 +51,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXZ-sm-wlh">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-hA-AiT">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-hA-AiT">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EyM-Mh-HN6">
@@ -78,16 +78,31 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="G6n-Xz-R5e">
+                                                <rect key="frame" x="20" y="348" width="80" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="Qtt-1J-cd5"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Order" cornerStyle="capsule">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="nrc-Nd-B6U" firstAttribute="width" secondItem="EyM-Mh-HN6" secondAttribute="width" multiplier="1.3" id="18C-vV-UMh"/>
                                             <constraint firstAttribute="bottom" secondItem="EyM-Mh-HN6" secondAttribute="bottom" constant="60" id="4KY-IC-A9p"/>
+                                            <constraint firstItem="G6n-Xz-R5e" firstAttribute="leading" secondItem="CRf-hA-AiT" secondAttribute="leading" constant="20" id="4rg-ZH-Rkt"/>
                                             <constraint firstItem="EyM-Mh-HN6" firstAttribute="centerY" secondItem="IYC-MR-khY" secondAttribute="centerY" id="61z-8u-j7J"/>
                                             <constraint firstItem="EyM-Mh-HN6" firstAttribute="width" secondItem="EyM-Mh-HN6" secondAttribute="height" id="72A-3J-88g"/>
                                             <constraint firstItem="tbY-Ih-n0e" firstAttribute="width" secondItem="nrc-Nd-B6U" secondAttribute="height" id="75L-iE-c10"/>
                                             <constraint firstItem="tbY-Ih-n0e" firstAttribute="centerX" secondItem="nrc-Nd-B6U" secondAttribute="centerX" id="9rf-iC-LEc"/>
                                             <constraint firstItem="EyM-Mh-HN6" firstAttribute="centerX" secondItem="CRf-hA-AiT" secondAttribute="centerX" id="Amb-LW-dTZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="G6n-Xz-R5e" secondAttribute="bottom" constant="10" id="CDf-eJ-HPy"/>
                                             <constraint firstAttribute="width" secondItem="CRf-hA-AiT" secondAttribute="height" id="L3F-A5-zBW"/>
                                             <constraint firstItem="EyM-Mh-HN6" firstAttribute="centerX" secondItem="IYC-MR-khY" secondAttribute="centerX" id="UMe-Pk-YHd"/>
                                             <constraint firstItem="tbY-Ih-n0e" firstAttribute="width" secondItem="nrc-Nd-B6U" secondAttribute="width" id="Vbj-YT-uTw"/>
@@ -131,6 +146,7 @@
                         <outlet property="detailsLabel" destination="49q-Gl-zLP" id="B1U-wE-HiN"/>
                         <outlet property="foodImageView" destination="IYC-MR-khY" id="VIr-xf-BKq"/>
                         <outlet property="nameLabel" destination="tbY-Ih-n0e" id="P4Z-Nu-D3n"/>
+                        <outlet property="orderButton" destination="G6n-Xz-R5e" id="hvr-dJ-Xz5"/>
                         <outlet property="plateImageView" destination="EyM-Mh-HN6" id="RL4-GM-EYS"/>
                         <outlet property="priceLabel" destination="nrc-Nd-B6U" id="jz1-z1-DZD"/>
                         <outlet property="scrollView" destination="YXZ-sm-wlh" id="Xew-OD-SbV"/>

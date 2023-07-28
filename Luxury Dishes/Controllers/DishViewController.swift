@@ -16,6 +16,7 @@ class DishViewController: UIViewController {
     @IBOutlet weak var priceLabel: CircularLabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var orderButton: UIButton!
     
     var dish: Dish!
     private var interactiveStartingPoint: CGPoint?
@@ -79,6 +80,7 @@ extension DishViewController {
         priceLabel.infiniteRotation()
         foodImageView.popIn()
         plateImageView.popIn()
+        orderButton.orderButtonAppearAnimation()
     }
 }
 
@@ -204,9 +206,10 @@ extension DishViewController: UIGestureRecognizerDelegate, UIScrollViewDelegate 
     }
     
     private func textAlphas(set to: Double) {
-        UIView.animate(withDuration: 0.3) {
-            self.priceLabel.alpha = to
-            self.nameLabel.alpha = to
+        UIView.animate(withDuration: 0.3) { [self] in
+            priceLabel.alpha = to
+            nameLabel.alpha = to
+            orderButton.alpha = to
         }
     }
 }

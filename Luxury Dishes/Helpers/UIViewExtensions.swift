@@ -97,6 +97,32 @@ extension UIView {
         rotation.repeatCount = Float.greatestFiniteMagnitude
         layer.add(rotation, forKey: "rotationAnimation")
     }
+    
+    func orderButtonAppearAnimation() {
+        alpha = 0
+        let tempY = layer.position.y
+        layer.position.y += 200
+        UIView.animate(withDuration: 3, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .allowUserInteraction) { [self] in
+            alpha = 1
+            layer.position.y = tempY
+            transform3D = getFlippedTransition(isScrollingUp: false)
+        }
+        UIView.animate(withDuration: 3, delay: 0.7, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [.allowUserInteraction, .beginFromCurrentState]) { [self] in
+            transform3D = getDefaultTransition(isScrollingUp: true)
+        } completion: { isFinished in
+            if isFinished {
+                UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0) { [self] in
+                    transform = CGAffineTransform(scaleX: -1, y: 1)
+                } completion: { isFinished in
+                    if isFinished {
+                        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0) { [self] in
+                            transform = CGAffineTransform(scaleX: 1, y: 1)
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // MARK: - Shadows & Corners
