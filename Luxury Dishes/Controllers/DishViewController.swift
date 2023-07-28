@@ -17,6 +17,9 @@ class DishViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var orderButton: UIButton!
+    @IBAction func orderButtonAction(_ sender: Any) {
+        SPConfetti.startAnimating(.centerWidthToDown, particles: [.star], duration: 0.3)
+    }
     
     var dish: Dish!
     private var interactiveStartingPoint: CGPoint?
