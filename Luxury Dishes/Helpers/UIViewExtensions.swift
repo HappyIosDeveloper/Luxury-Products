@@ -186,10 +186,12 @@ extension UIView {
         }
     }
     
-    func pop(duration: CGFloat = 0.6) {
+    func pop(duration: CGFloat = 0.6, startingAlpha: Double = 1) {
         isHidden = false
         transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
-        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: duration + 0.2, initialSpringVelocity: 5.0, options: UIView.AnimationOptions.allowUserInteraction, animations: { () -> Void in
+        alpha = startingAlpha
+        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: duration + 0.2, initialSpringVelocity: 5.0, options: [.allowUserInteraction, .beginFromCurrentState, .curveEaseInOut], animations: { () -> Void in
+            self.alpha = 1
             self.transform = CGAffineTransform(scaleX: 1, y: 1)
             self.layoutIfNeeded()
         }) { (Bool) -> Void in

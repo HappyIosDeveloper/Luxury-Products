@@ -48,6 +48,7 @@ class DishViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         UIView.animate(withDuration: 1) {
+            self.plateImageView.layer.shadowOpacity = 0
             self.topSection.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }
     }

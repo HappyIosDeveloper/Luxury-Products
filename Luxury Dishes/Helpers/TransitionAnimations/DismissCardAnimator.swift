@@ -86,7 +86,7 @@ final class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning
             if success {
                 cardDetailView.removeFromSuperview()
                 self.params.fromCell.isHidden = false
-                self.params.fromCell.pop()
+                self.params.fromCell.pop(duration: 1, startingAlpha: 0)
                 self.params.fromCell.foodImageView.rotate()
                 self.params.fromCell.nameLabel.textRotateTop()
                 self.params.fromCell.priceLabel.textRotateBottom()
