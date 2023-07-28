@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 final class ViewController: UIViewController {
     
@@ -75,6 +76,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.parentAppearEffect(isScrollingUp: isScrollingUp)
+        playThickSound()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -119,5 +121,11 @@ extension ViewController {
         present(vc, animated: true, completion: { [weak cell] in
             cell?.unfreezeAnimations()
         })
+    }
+    
+    private func playThickSound() {
+        AudioServicesPlayAlertSound(SystemSoundID(1104))
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
     }
 }

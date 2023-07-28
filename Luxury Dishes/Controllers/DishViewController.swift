@@ -188,7 +188,7 @@ extension DishViewController: UIGestureRecognizerDelegate, UIScrollViewDelegate 
             }
             dismissalAnimator?.startAnimation()
         default:
-            print("Impossible gesture state? \(gesture.state.rawValue)")
+            break // print("Impossible gesture state? \(gesture.state.rawValue)")
         }
     }
     
