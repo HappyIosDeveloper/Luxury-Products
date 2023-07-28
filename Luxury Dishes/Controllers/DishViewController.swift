@@ -109,6 +109,7 @@ extension DishViewController: UIGestureRecognizerDelegate, UIScrollViewDelegate 
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         handleDismissalPan(gesture: scrollView.panGestureRecognizer)
+        rotateFood(value: scrollView.contentOffset.y / 40)
     }
 
     @objc func handleDismissalPan(gesture: UIPanGestureRecognizer) {
@@ -146,7 +147,6 @@ extension DishViewController: UIGestureRecognizerDelegate, UIScrollViewDelegate 
         case .began:
             dismissalAnimator = createInteractiveDismissalAnimatorIfNeeded()
         case .changed:
-            rotateFood(value: progress)
             textAlphas(set: 0)
             dismissalAnimator = createInteractiveDismissalAnimatorIfNeeded()
             let actualProgress = progress
