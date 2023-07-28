@@ -39,9 +39,9 @@ extension CustomCell {
         selectionStyle = .none
         parentView.dropShadowAndCornerRadius(bounds.width / 5)
         plateImageView.dropShadow()
-        nameLabel.textColor = .darkText
+        nameLabel.textColor = .white
         nameLabel.font = UIFont(name: "HelveticaNeue-Light", size: 20)
-        priceLabel.textColor = .darkText
+        priceLabel.textColor = .white
         priceLabel.font = UIFont(name: "HelveticaNeue-Light", size: 17)
         plateImageView.addParallax(range: 20)
         foodImageView.addParallax(range: -20)

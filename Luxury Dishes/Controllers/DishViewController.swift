@@ -61,9 +61,9 @@ extension DishViewController {
         plateImageView.dropShadow(isForceShrink: true)
         plateImageView.image = UIImage(named: "Plate")
         foodImageView.transform = CGAffineTransform(rotationAngle: .pi)
-        nameLabel.textColor = .darkText
+        nameLabel.textColor = .white
         nameLabel.font = UIFont(name: "HelveticaNeue-Light", size: 20)
-        priceLabel.textColor = .darkText
+        priceLabel.textColor = .white
         priceLabel.font = UIFont(name: "HelveticaNeue-Light", size: 20)
         plateImageView.addParallax(range: 20)
         foodImageView.addParallax(range: -20)
