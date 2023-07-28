@@ -111,11 +111,11 @@ extension UIView {
             transform3D = getDefaultTransition(isScrollingUp: true)
         } completion: { isFinished in
             if isFinished {
-                UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0) { [self] in
+                UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .allowUserInteraction) { [self] in
                     transform = CGAffineTransform(scaleX: -1, y: 1)
                 } completion: { isFinished in
                     if isFinished {
-                        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0) { [self] in
+                        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .allowUserInteraction) { [self] in
                             transform = CGAffineTransform(scaleX: 1, y: 1)
                         }
                     }
@@ -240,6 +240,21 @@ extension UIView {
             let motionEffectGroup = UIMotionEffectGroup()
             motionEffectGroup.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
             addMotionEffect(motionEffectGroup)
+        }
+    }
+}
+
+// MARK: - Dish Detail Controller
+extension UIView {
+    
+    func platConfetti() {
+        let confettiView = SwiftConfettiView(frame: self.bounds)
+        confettiView.type = .confetti
+        addSubview(confettiView)
+        confettiView.setup()
+        confettiView.startConfetti()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            confettiView.stopConfetti()
         }
     }
 }

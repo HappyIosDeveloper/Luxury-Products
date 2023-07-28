@@ -7,18 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B256B0D2A73E2F100D9AADC /* SPConfetti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B256AFC2A73E2F100D9AADC /* SPConfetti.swift */; };
-		0B256B0E2A73E2F100D9AADC /* SPConfettiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B256AFD2A73E2F100D9AADC /* SPConfettiDelegate.swift */; };
-		0B256B0F2A73E2F100D9AADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B256AFF2A73E2F100D9AADC /* Assets.xcassets */; };
-		0B256B102A73E2F100D9AADC /* SPConfettiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B256B012A73E2F100D9AADC /* SPConfettiConfiguration.swift */; };
-		0B256B112A73E2F100D9AADC /* SPConfettiParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B256B022A73E2F100D9AADC /* SPConfettiParticle.swift */; };
-		0B256B122A73E2F100D9AADC /* SPConfettiAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B256B032A73E2F100D9AADC /* SPConfettiAnimation.swift */; };
-		0B256B132A73E2F100D9AADC /* SPConfettiParticlesConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B256B042A73E2F100D9AADC /* SPConfettiParticlesConfig.swift */; };
-		0B256B142A73E2F100D9AADC /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B256B062A73E2F100D9AADC /* Delay.swift */; };
-		0B256B152A73E2F100D9AADC /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B256B072A73E2F100D9AADC /* UIImageExtension.swift */; };
-		0B256B162A73E2F100D9AADC /* SPConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B256B082A73E2F100D9AADC /* SPConfettiView.swift */; };
-		0B256B172A73E2F100D9AADC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B256B0A2A73E2F100D9AADC /* Images.swift */; };
-		0B256B182A73E2F100D9AADC /* SPConfettiModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B256B0C2A73E2F100D9AADC /* SPConfettiModifier.swift */; };
+		0B2AA31B2A74494300E2CC72 /* SwiftConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2AA31A2A74494300E2CC72 /* SwiftConfettiView.swift */; };
 		0B32B6D32A71A1FE002FAA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B32B6D22A71A1FE002FAA8B /* AppDelegate.swift */; };
 		0B32B6D52A71A1FE002FAA8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B32B6D42A71A1FE002FAA8B /* SceneDelegate.swift */; };
 		0B32B6D72A71A1FE002FAA8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B32B6D62A71A1FE002FAA8B /* ViewController.swift */; };
@@ -41,18 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B256AFC2A73E2F100D9AADC /* SPConfetti.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConfetti.swift; sourceTree = "<group>"; };
-		0B256AFD2A73E2F100D9AADC /* SPConfettiDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConfettiDelegate.swift; sourceTree = "<group>"; };
-		0B256AFF2A73E2F100D9AADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0B256B012A73E2F100D9AADC /* SPConfettiConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConfettiConfiguration.swift; sourceTree = "<group>"; };
-		0B256B022A73E2F100D9AADC /* SPConfettiParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConfettiParticle.swift; sourceTree = "<group>"; };
-		0B256B032A73E2F100D9AADC /* SPConfettiAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConfettiAnimation.swift; sourceTree = "<group>"; };
-		0B256B042A73E2F100D9AADC /* SPConfettiParticlesConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConfettiParticlesConfig.swift; sourceTree = "<group>"; };
-		0B256B062A73E2F100D9AADC /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
-		0B256B072A73E2F100D9AADC /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		0B256B082A73E2F100D9AADC /* SPConfettiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConfettiView.swift; sourceTree = "<group>"; };
-		0B256B0A2A73E2F100D9AADC /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		0B256B0C2A73E2F100D9AADC /* SPConfettiModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConfettiModifier.swift; sourceTree = "<group>"; };
+		0B2AA31A2A74494300E2CC72 /* SwiftConfettiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftConfettiView.swift; sourceTree = "<group>"; };
 		0B32B6CF2A71A1FE002FAA8B /* Luxury Dishes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Luxury Dishes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B32B6D22A71A1FE002FAA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B32B6D42A71A1FE002FAA8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,65 +65,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B256AFB2A73E2F100D9AADC /* SPConfetti */ = {
-			isa = PBXGroup;
-			children = (
-				0B256AFC2A73E2F100D9AADC /* SPConfetti.swift */,
-				0B256AFD2A73E2F100D9AADC /* SPConfettiDelegate.swift */,
-				0B256AFE2A73E2F100D9AADC /* Resources */,
-				0B256B002A73E2F100D9AADC /* Models */,
-				0B256B052A73E2F100D9AADC /* Extensions */,
-				0B256B082A73E2F100D9AADC /* SPConfettiView.swift */,
-				0B256B092A73E2F100D9AADC /* Services */,
-				0B256B0B2A73E2F100D9AADC /* SwiftUI */,
-			);
-			path = SPConfetti;
-			sourceTree = "<group>";
-		};
-		0B256AFE2A73E2F100D9AADC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0B256AFF2A73E2F100D9AADC /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		0B256B002A73E2F100D9AADC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				0B256B012A73E2F100D9AADC /* SPConfettiConfiguration.swift */,
-				0B256B022A73E2F100D9AADC /* SPConfettiParticle.swift */,
-				0B256B032A73E2F100D9AADC /* SPConfettiAnimation.swift */,
-				0B256B042A73E2F100D9AADC /* SPConfettiParticlesConfig.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		0B256B052A73E2F100D9AADC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				0B256B062A73E2F100D9AADC /* Delay.swift */,
-				0B256B072A73E2F100D9AADC /* UIImageExtension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		0B256B092A73E2F100D9AADC /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				0B256B0A2A73E2F100D9AADC /* Images.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		0B256B0B2A73E2F100D9AADC /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				0B256B0C2A73E2F100D9AADC /* SPConfettiModifier.swift */,
-			);
-			path = SwiftUI;
-			sourceTree = "<group>";
-		};
 		0B32B6C62A71A1FE002FAA8B = {
 			isa = PBXGroup;
 			children = (
@@ -200,13 +119,13 @@
 		0B746DEE2A71B5CA003DA243 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0B256AFB2A73E2F100D9AADC /* SPConfetti */,
 				0BF7A9972A72D872005E6127 /* TransitionAnimations */,
 				0B746DEF2A71B5D8003DA243 /* UIViewExtensions.swift */,
 				0B746DF12A72671B003DA243 /* UIColorExtensions.swift */,
 				0B746DF32A726938003DA243 /* UITableViewExtensions.swift */,
 				0B746DF52A726A9D003DA243 /* CircularLabel.swift */,
 				0BF7A9932A72D662005E6127 /* GlobalConstants.swift */,
+				0B2AA31A2A74494300E2CC72 /* SwiftConfettiView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -292,7 +211,6 @@
 				0B32B6DC2A71A200002FAA8B /* Assets.xcassets in Resources */,
 				0B32B6EA2A71A6D5002FAA8B /* CustomCell.xib in Resources */,
 				0B32B6DA2A71A1FE002FAA8B /* Main.storyboard in Resources */,
-				0B256B0F2A73E2F100D9AADC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,29 +222,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B746DF02A71B5D8003DA243 /* UIViewExtensions.swift in Sources */,
-				0B256B162A73E2F100D9AADC /* SPConfettiView.swift in Sources */,
-				0B256B132A73E2F100D9AADC /* SPConfettiParticlesConfig.swift in Sources */,
-				0B256B152A73E2F100D9AADC /* UIImageExtension.swift in Sources */,
 				0BF7A9922A72CCB9005E6127 /* Dish.swift in Sources */,
 				0B746DF42A726938003DA243 /* UITableViewExtensions.swift in Sources */,
 				0B32B6D72A71A1FE002FAA8B /* ViewController.swift in Sources */,
 				0BF7A9962A72D83B005E6127 /* CardTransition.swift in Sources */,
 				0BF7A9992A72D886005E6127 /* PresentCardAnimator.swift in Sources */,
+				0B2AA31B2A74494300E2CC72 /* SwiftConfettiView.swift in Sources */,
 				0B746DF62A726A9D003DA243 /* CircularLabel.swift in Sources */,
 				0BF7A9942A72D662005E6127 /* GlobalConstants.swift in Sources */,
-				0B256B0E2A73E2F100D9AADC /* SPConfettiDelegate.swift in Sources */,
 				0B32B6D32A71A1FE002FAA8B /* AppDelegate.swift in Sources */,
-				0B256B142A73E2F100D9AADC /* Delay.swift in Sources */,
 				0B69D64C2A72CB01005C8E23 /* DishViewController.swift in Sources */,
-				0B256B102A73E2F100D9AADC /* SPConfettiConfiguration.swift in Sources */,
-				0B256B0D2A73E2F100D9AADC /* SPConfetti.swift in Sources */,
 				0B746DF22A72671B003DA243 /* UIColorExtensions.swift in Sources */,
 				0B32B6E92A71A6D5002FAA8B /* CustomCell.swift in Sources */,
-				0B256B182A73E2F100D9AADC /* SPConfettiModifier.swift in Sources */,
-				0B256B122A73E2F100D9AADC /* SPConfettiAnimation.swift in Sources */,
 				0BF7A99D2A72DB0E005E6127 /* CardPresentationController.swift in Sources */,
-				0B256B112A73E2F100D9AADC /* SPConfettiParticle.swift in Sources */,
-				0B256B172A73E2F100D9AADC /* Images.swift in Sources */,
 				0B32B6D52A71A1FE002FAA8B /* SceneDelegate.swift in Sources */,
 				0BF7A99B2A72DA7E005E6127 /* DismissCardAnimator.swift in Sources */,
 			);
