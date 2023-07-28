@@ -15,7 +15,8 @@ class DishViewController: UIViewController {
     @IBOutlet weak var nameLabel: CircularLabel!
     @IBOutlet weak var priceLabel: CircularLabel!
     @IBOutlet weak var scrollView: UIScrollView!
-
+    @IBOutlet weak var detailsLabel: UILabel!
+    
     var dish: Dish!
     private var interactiveStartingPoint: CGPoint?
     private var dismissalAnimator: UIViewPropertyAnimator?
@@ -70,6 +71,7 @@ extension DishViewController {
         foodImageView.image = UIImage(named: dish.image)
         nameLabel.text = dish.name
         priceLabel.text = dish.name.compactMap({_ in "   "}).joined() + dish.price
+        detailsLabel.text = dish.details
         nameLabel.infiniteRotation()
         priceLabel.infiniteRotation()
         foodImageView.popIn()
@@ -86,12 +88,6 @@ extension DishViewController {
 extension DishViewController: UIGestureRecognizerDelegate, UIScrollViewDelegate {
     
     private func setupDismissFunctions() {
-        if GlobalConstants.isEnabledDebugAnimatingViews {
-            scrollView.layer.borderWidth = 3
-            scrollView.layer.borderColor = UIColor.green.cgColor
-            scrollView.subviews.first!.layer.borderWidth = 3
-            scrollView.subviews.first!.layer.borderColor = UIColor.purple.cgColor
-        }
         scrollView.delegate = self
         scrollView.contentInsetAdjustmentBehavior = .never
         dismissalPanGesture.addTarget(self, action: #selector(handleDismissalPan(gesture:)))
@@ -107,6 +103,11 @@ extension DishViewController: UIGestureRecognizerDelegate, UIScrollViewDelegate 
         view.clipsToBounds = true // to handle corner radius while shrinking
     }
     
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        handleDismissalPan(gesture: scrollView.panGestureRecognizer)
+    }
+
     @objc func handleDismissalPan(gesture: UIPanGestureRecognizer) {
         let isScreenEdgePan = gesture.isKind(of: DismissalScreenEdgePanGesture.self)
         let targetAnimatedView = gesture.view!
@@ -179,9 +180,9 @@ extension DishViewController: UIGestureRecognizerDelegate, UIScrollViewDelegate 
                 gesture.isEnabled = true
                 textAlphas(set: 1)
             }
-            dismissalAnimator!.startAnimation()
+            dismissalAnimator?.startAnimation()
         default:
-            fatalError("Impossible gesture state? \(gesture.state.rawValue)")
+            print("Impossible gesture state? \(gesture.state.rawValue)")
         }
     }
     

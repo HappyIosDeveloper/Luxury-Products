@@ -83,12 +83,6 @@ final class PresentCardTransitionDriver {
         // Temporary container view for animation
         let animatedContainerView = UIView()
         animatedContainerView.translatesAutoresizingMaskIntoConstraints = false
-        if GlobalConstants.isEnabledDebugAnimatingViews {
-            animatedContainerView.layer.borderColor = UIColor.yellow.cgColor
-            animatedContainerView.layer.borderWidth = 4
-            cardDetailView.layer.borderColor = UIColor.red.cgColor
-            cardDetailView.layer.borderWidth = 2
-        }
         container.addSubview(animatedContainerView)
         
         do /* Fix centerX/width/height of animated container to container */ {

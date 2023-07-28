@@ -15,8 +15,6 @@ enum GlobalConstants {
     static let cardVerticalExpandingStyle: CardVerticalExpandingStyle = .fromTop
     /// Without this, there'll be weird offset (probably from scrollView) that obscures the card content view of the cardDetailView.
     static let isEnabledWeirdTopInsetsFix = true
-    /// If true, will draw borders on animating views.
-    static let isEnabledDebugAnimatingViews = false
     /// If true, this will add a 'reverse' additional top safe area insets to make the final top safe area insets zero.
     static let isEnabledTopSafeAreaInsetsFixOnCardDetailViewController = false
     /// If true, will always allow user to scroll while it's animated.

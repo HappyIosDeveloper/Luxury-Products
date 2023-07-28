@@ -47,12 +47,12 @@ extension ViewController {
     
     private func fillItems() {
         dishes = [
-            Dish(name: "Bluefin Tuna", price: "$1,000", color: "feeded", image: "1"),
-            Dish(name: "Iberico Ham", price: "$2,300", color: "decade", image: "2"),
-            Dish(name: "Kopi Luwak Coffee", price: "$9,800", color: "dabbed", image: "3"),
-            Dish(name: "Matsutake Mushrooms", price: "$1,900", color: "beefed", image: "4"),
-            Dish(name: "Beluga Caviar", price: "$1,400", color: "beaded", image: "5"),
-            Dish(name: "White Truffles", price: "$1,500", color: "beaded", image: "6"),
+            Dish(name: "Bluefin Tuna", price: "$1,000", color: "feeded", image: "1", details: Dish.kobeDetails),
+            Dish(name: "Iberico Ham", price: "$2,300", color: "decade", image: "2", details: Dish.ibericoHamDetails),
+            Dish(name: "Kopi Luwak Coffee", price: "$9,800", color: "dabbed", image: "3", details: Dish.kopiLuwakCoffeeDetails),
+            Dish(name: "Matsutake Mushrooms", price: "$1,900", color: "beefed", image: "4", details: Dish.matsutakeMushroomsDetails),
+            Dish(name: "Beluga Caviar", price: "$1,400", color: "beaded", image: "5", details: Dish.belugaCaviarDetails),
+            Dish(name: "White Truffles", price: "$1,500", color: "beaded", image: "6", details: Dish.whiteTrufflesDetails),
         ]
         for _ in 0...10 {
             dishes += dishes

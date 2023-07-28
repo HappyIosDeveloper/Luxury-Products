@@ -48,7 +48,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXZ-sm-wlh">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXZ-sm-wlh">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-hA-AiT">
@@ -99,12 +99,21 @@
                                             <constraint firstItem="tbY-Ih-n0e" firstAttribute="centerY" secondItem="nrc-Nd-B6U" secondAttribute="centerY" id="ueu-Uf-Lbo"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49q-Gl-zLP">
+                                        <rect key="frame" x="20" y="413" width="353" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="CRf-hA-AiT" secondAttribute="bottom" id="Efd-c2-abH"/>
+                                    <constraint firstItem="49q-Gl-zLP" firstAttribute="top" secondItem="CRf-hA-AiT" secondAttribute="bottom" constant="20" id="1QG-be-y4d"/>
+                                    <constraint firstAttribute="trailing" secondItem="49q-Gl-zLP" secondAttribute="trailing" constant="20" id="IZb-rD-ozc"/>
                                     <constraint firstItem="CRf-hA-AiT" firstAttribute="leading" secondItem="YXZ-sm-wlh" secondAttribute="leading" id="KOk-q8-Rs1"/>
+                                    <constraint firstAttribute="bottom" secondItem="49q-Gl-zLP" secondAttribute="bottom" constant="20" id="KQz-af-8vk"/>
                                     <constraint firstItem="CRf-hA-AiT" firstAttribute="top" secondItem="YXZ-sm-wlh" secondAttribute="top" id="YlK-yg-YF5"/>
                                     <constraint firstAttribute="trailing" secondItem="CRf-hA-AiT" secondAttribute="trailing" id="fe0-GE-Mpz"/>
+                                    <constraint firstItem="49q-Gl-zLP" firstAttribute="leading" secondItem="YXZ-sm-wlh" secondAttribute="leading" constant="20" id="g40-cD-8na"/>
                                     <constraint firstItem="CRf-hA-AiT" firstAttribute="width" secondItem="YXZ-sm-wlh" secondAttribute="width" id="sRK-Cr-I7L"/>
                                 </constraints>
                             </scrollView>
@@ -119,6 +128,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="detailsLabel" destination="49q-Gl-zLP" id="B1U-wE-HiN"/>
                         <outlet property="foodImageView" destination="IYC-MR-khY" id="VIr-xf-BKq"/>
                         <outlet property="nameLabel" destination="tbY-Ih-n0e" id="P4Z-Nu-D3n"/>
                         <outlet property="plateImageView" destination="EyM-Mh-HN6" id="RL4-GM-EYS"/>
