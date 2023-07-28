@@ -65,6 +65,8 @@ extension DishViewController {
         nameLabel.font = UIFont(name: "HelveticaNeue-Light", size: 20)
         priceLabel.textColor = .darkText
         priceLabel.font = UIFont(name: "HelveticaNeue-Light", size: 20)
+        plateImageView.addParallax(range: 20)
+        foodImageView.addParallax(range: -20)
     }
     
     private func setupViews() {

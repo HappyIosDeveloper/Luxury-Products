@@ -199,3 +199,21 @@ extension UIView {
         }
     }
 }
+
+// MARK: Parallax Effect
+extension UIView {
+    
+    func addParallax(range: Double = 50) {
+        if motionEffects.isEmpty {
+            let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+            horizontalMotionEffect.minimumRelativeValue = -range
+            horizontalMotionEffect.maximumRelativeValue = range
+            let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+            verticalMotionEffect.minimumRelativeValue = -range
+            verticalMotionEffect.maximumRelativeValue = range
+            let motionEffectGroup = UIMotionEffectGroup()
+            motionEffectGroup.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
+            addMotionEffect(motionEffectGroup)
+        }
+    }
+}

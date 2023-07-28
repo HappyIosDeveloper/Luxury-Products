@@ -43,6 +43,8 @@ extension CustomCell {
         nameLabel.font = UIFont(name: "HelveticaNeue-Light", size: 20)
         priceLabel.textColor = .darkText
         priceLabel.font = UIFont(name: "HelveticaNeue-Light", size: 17)
+        plateImageView.addParallax(range: 20)
+        foodImageView.addParallax(range: -20)
     }
     
     func setup(dish: Dish) {
