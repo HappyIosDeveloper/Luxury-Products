@@ -146,6 +146,7 @@ extension DishViewController: UIGestureRecognizerDelegate, UIScrollViewDelegate 
         case .began:
             dismissalAnimator = createInteractiveDismissalAnimatorIfNeeded()
         case .changed:
+            rotateFood(value: progress)
             textAlphas(set: 0)
             dismissalAnimator = createInteractiveDismissalAnimatorIfNeeded()
             let actualProgress = progress
@@ -196,6 +197,10 @@ extension DishViewController: UIGestureRecognizerDelegate, UIScrollViewDelegate 
     private func didCancelDismissalTransition() {
         interactiveStartingPoint = nil
         dismissalAnimator = nil
+    }
+    
+    private func rotateFood(value: CGFloat) {
+        foodImageView.transform = CGAffineTransform(rotationAngle: .pi + value)
     }
     
     private func textAlphas(set to: Double) {

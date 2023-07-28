@@ -41,7 +41,7 @@ extension ViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         DispatchQueue.main.async {
-            self.tableView.reloadData()
+            self.tableView.reloadWithAnimation()
         }
     }
     

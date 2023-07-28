@@ -64,19 +64,19 @@ extension UIView {
 // MARK: - Rotations
 extension UIView {
     
-    func textRotateTop() {
+    func textRotateTop(delay: Double = 1) {
         alpha = 0
         transform = CGAffineTransform(rotationAngle: -.pi).translatedBy(x: 0.1, y: 0.1)
-        UIView.animate(withDuration: 1, delay: 1, animations: {
+        UIView.animate(withDuration: 1, delay: delay, animations: {
             self.alpha = 1
             self.transform = .identity
         })
     }
     
-    func textRotateBottom() {
+    func textRotateBottom(delay: Double = 1.2) {
         alpha = 0
         transform = .identity
-        UIView.animate(withDuration: 1, delay: 1.2, animations: {
+        UIView.animate(withDuration: 1, delay: delay, animations: {
             self.alpha = 1
             self.transform = CGAffineTransform(rotationAngle: .pi).translatedBy(x: 0.1, y: 0.1)
         })
