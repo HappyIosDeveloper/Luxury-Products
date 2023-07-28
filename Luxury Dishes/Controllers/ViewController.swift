@@ -14,25 +14,11 @@ final class ViewController: UIViewController {
     lazy var dishes: [Dish] = []
     private var isScrollingUp = false
     private var transition: CardTransition?
-    private var openCellIndex = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if openCellIndex != -1 {
-            let cell = tableView.cellForRow(at: IndexPath(row: openCellIndex, section: 0)) as! CustomCell
-            cell.foodImageView.popIn() {
-                cell.foodImageView.rotate()
-                cell.nameLabel.textRotateTop()
-                cell.priceLabel.textRotateBottom()
-            }
-        }
     }
 }
 
@@ -110,7 +96,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController {
     
     private func cellTapAction(for indexPath: IndexPath) {
-        openCellIndex = indexPath.row
         let cell = tableView.cellForRow(at: indexPath) as! CustomCell
         cell.freezeAnimations()
         // Get current frame on screen

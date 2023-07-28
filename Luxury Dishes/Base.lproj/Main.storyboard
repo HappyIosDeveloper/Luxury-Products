@@ -55,22 +55,22 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EyM-Mh-HN6">
-                                                <rect key="frame" x="60" y="80" width="273" height="273"/>
+                                                <rect key="frame" x="70" y="80" width="253" height="253"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IYC-MR-khY">
-                                                <rect key="frame" x="60" y="80" width="273" height="273"/>
+                                                <rect key="frame" x="70" y="80" width="253" height="253"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="IYC-MR-khY" secondAttribute="height" id="oUO-P4-6z2"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrc-Nd-B6U" customClass="CircularLabel" customModule="Luxury_Dishes" customModuleProvider="target">
-                                                <rect key="frame" x="32.666666666666657" y="52.666666666666657" width="327.66666666666674" height="327.66666666666674"/>
+                                                <rect key="frame" x="32" y="42" width="329" height="329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbY-Ih-n0e" customClass="CircularLabel" customModule="Luxury_Dishes" customModuleProvider="target">
-                                                <rect key="frame" x="32.666666666666657" y="52.666666666666657" width="327.66666666666674" height="327.66666666666674"/>
+                                                <rect key="frame" x="32" y="42" width="329" height="329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="tbY-Ih-n0e" secondAttribute="height" id="NoW-XW-WVT"/>
                                                 </constraints>
@@ -81,8 +81,8 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="nrc-Nd-B6U" firstAttribute="width" secondItem="EyM-Mh-HN6" secondAttribute="width" multiplier="1.2" id="18C-vV-UMh"/>
-                                            <constraint firstAttribute="bottom" secondItem="EyM-Mh-HN6" secondAttribute="bottom" constant="40" id="4KY-IC-A9p"/>
+                                            <constraint firstItem="nrc-Nd-B6U" firstAttribute="width" secondItem="EyM-Mh-HN6" secondAttribute="width" multiplier="1.3" id="18C-vV-UMh"/>
+                                            <constraint firstAttribute="bottom" secondItem="EyM-Mh-HN6" secondAttribute="bottom" constant="60" id="4KY-IC-A9p"/>
                                             <constraint firstItem="EyM-Mh-HN6" firstAttribute="centerY" secondItem="IYC-MR-khY" secondAttribute="centerY" id="61z-8u-j7J"/>
                                             <constraint firstItem="EyM-Mh-HN6" firstAttribute="width" secondItem="EyM-Mh-HN6" secondAttribute="height" id="72A-3J-88g"/>
                                             <constraint firstItem="tbY-Ih-n0e" firstAttribute="width" secondItem="nrc-Nd-B6U" secondAttribute="height" id="75L-iE-c10"/>
@@ -151,6 +151,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="nrc-Nd-B6U">
+            <size key="intrinsicContentSize" width="39" height="20.333333333333332"/>
+        </designable>
         <designable name="tbY-Ih-n0e">
             <size key="intrinsicContentSize" width="39" height="20.333333333333332"/>
         </designable>

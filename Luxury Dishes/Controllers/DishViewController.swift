@@ -47,7 +47,7 @@ class DishViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         UIView.animate(withDuration: 1) {
-            self.view.subviews.forEach({$0.alpha = 0})
+            self.topSection.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }
     }
 }
@@ -69,7 +69,7 @@ extension DishViewController {
         topSection.backgroundColor = UIColor(hex: dish.color)
         foodImageView.image = UIImage(named: dish.image)
         nameLabel.text = dish.name
-        priceLabel.text = dish.name.compactMap({_ in "    "}).joined() + dish.price
+        priceLabel.text = dish.name.compactMap({_ in "   "}).joined() + dish.price
         nameLabel.infiniteRotation()
         priceLabel.infiniteRotation()
         foodImageView.popIn()
