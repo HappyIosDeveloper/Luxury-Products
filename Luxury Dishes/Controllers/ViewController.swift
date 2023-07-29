@@ -125,7 +125,7 @@ extension ViewController {
     
     private func playThickSound() {
         AudioServicesPlayAlertSound(SystemSoundID(1104))
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
+        // let generator = UIImpactFeedbackGenerator(style: .light)
+        // generator.impactOccurred()
     }
 }
